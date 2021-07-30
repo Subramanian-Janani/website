@@ -1511,3 +1511,9 @@ section {
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
 }
+.icon-box > h4 {
+  text-align: center;
+}
+.icon-box > p {
+  text-align: center;
+}
