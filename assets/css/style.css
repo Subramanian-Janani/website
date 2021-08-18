@@ -1530,3 +1530,17 @@ section {
   align-items: center;
   flex-direction: column;
 }
+
+
+.iframe-video {
+  width:500px;
+  height:300px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .iframe-video {
+    width:auto;
+    height:auto;
+  }
+}
