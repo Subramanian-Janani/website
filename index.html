@@ -336,7 +336,7 @@
                 <img
                   style="max-width: 50%;"
                   class="img-fluid"
-                  src="assets/img/portfolio/1.png"
+                  src="assets/img/portfolio/fritolay1.png"
                   alt="..."
                 />
               </a>
@@ -809,27 +809,112 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project Details Go Here-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">Conveyor System Simulation Project</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Background
                   </p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/05-full.jpg"
+                    src="assets/img/portfolio/fritolay2.png"
                     alt="..."
                   />
                   <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                    The scope of this project focused on the eaches picking process currently present at Frito-Lay. Currently, convenience stores order custom cases of ‘eaches’ (another name for bags of chips) instead of full cases of eaches. This makes up about 25% of the business and is inefficient due to the manual picking. The proposed automated solution would make this process a lot easier. This automated solution is being piloted and has several key components that feature new and existing technologies that integrate into the current warehouse system.
                   </p>
-                  <ul class="list-inline">
-                    <li>Date: January 2021</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
+                  <p>
+                    The very first component of this automated solution involved converting full cases of eaches into order-line quantities, or patterns of eaches as shown below.
+                  </p>
+                   <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay2.png"
+                    alt="..."
+                   />
+                  <p>
+                    The picking and conveyor system of this component was experiencing time delays so my project involved developing a simulation that would quantify these existing time delays and validate a new logic for the equipment that would improve the production rate overall.
+                  </p>
+                  <p>
+                    The conveyor system consisted of several different parts highlighted below:
+                  </p>
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay3.png"
+                    alt="..."
+                  />
+                  <p>
+                    Time delays occurred on this conveyor system when patterns of eaches consisting of 2 rows or less were produced. The proposed logic change involved converting one of the conveyors into a secondary buffer conveyor to improve the production rate.
+                  </p>
+                  <p>
+                    I was given the picking rate, accelerations, velocities, and length data of all components, rate limitations as well as order-line quantity specifications. I used these values to develop my simulation using VBA. This tool was used to simulate patterns on the current conveyor system.
+                  </p>
+                  <p>
+                     My developmental process is highlighted in these following steps:
+                  </p>
+                  <ul>
+                    <li>
+                      I first developed an outline of a model for a single each travelling through the current conveyor system and printed out time stamps as each conveyor was completed.
+                    </li>
+                    <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay4.png"
+                    alt="..."
+                    />
+                    <li>
+                      I then repeated this constant each pattern for an entire sequence as shown to simulate how patterns would travel through the entire conveyor system. This allowed me to calculate & print out the time delays present between each pattern.
+                    </li>
+                     <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay5.png"
+                    alt="..."
+                    />
+                    <li>
+                      To model how patterns are actually run through the system, I varied the number of eaches in every pattern along with the total number of patterns. printing out time stamps of every single pattern and the time delays between each one.
+                    </li>
+                    <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay6.png"
+                    alt="..."
+                    />
+                    <li>
+                      I then set up the proposed model, which implemented the secondary buffer. This allowed me to compare the time delays, production rates, production times, and individual pattern tims between both the current and proposed system.
+                    </li>
+                    <li>
+                      Finally, I tested a week's worth of real data to use for my analysis and draw conclusions about the proposed method.
+                    </li>
+                    <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay7.png"
+                    alt="..."
+                    />
                   </ul>
+                  <p>
+                    In order to validate my simulation before running it through real data, I ran pattern tests with the actual pilot equipment and found there to be a 1.21% difference between tested and simulated. After proving my simulation tool, I then began to test real data.
+                  </p>
+                  <p>
+                    After running the weeks worth of real data through the current and proposed simulation, I found a 2.81% improvement in production time and a 3.30% improvement in production rate which correlated to an increased output of 9 eaches case per hour.
+                  </p>
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/portfolio/fritolay8.png"
+                    alt="..."
+                    />
+                  <b>Final Effect of Project:</b>
+                  <p>
+                    After the success of the simulation results, I proposed this method to our vendors of the equipment who approved the solution and actively worked on implementing the proposed method.
+                  </p>
+                  <b>Final Thoughts:</b>
+                  <p>
+                    The VBA simulation tool that I developed is versatile in its use. It can run both real and mockup data. Additionally, all givens and assumptions can be modified for future testing and rate improvement. Finally, this tool includes all skus, or all types of chip bags; therefore, it would generate accurate predictive data when all skus are finally implemented.
+                  </p>
+                  <p>
+                    The proposed method of using a secondary buffer could be used for future conveyor systems that are developed as well. Therefore, this model saves time down the road & opens the door for other applications that can use this logic (future reassessments).
+                  </p>
+                  <b>Future Considerations:</b>
+                  <p>
+                    Currently, different patterns of eaches are arranged based on the order of fulfillment needs. Since the length of patterns affect the rate, it would be interesting to see how adjusting the order in which these patterns come through has an effect on the production rate.
+                  </p>
+                  <p>
+                    Additionally, adjusting the length of conveyors could also have some effect on the production rate and could be analyzed to see effects on time delays.
+                  </p>    
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
